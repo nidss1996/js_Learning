@@ -102,5 +102,21 @@ const userFromDatabase = [
 
 // console.log(Object.keys(tinderUser1))
 // console.log(Object.values(tinderUser1))
-console.log(Object.entries(tinderUser1))
-console.log(tinderUser1.hasOwnProperty('Email1'))
+// console.log(Object.entries(tinderUser1))
+// console.log(tinderUser1.hasOwnProperty('Email1'))
+
+//#################Distructuring the Objec and Arrya ##################
+
+const course = {
+    name: "Jyothi",
+    courseInstructor: "Neha",
+    price: "free"
+}
+
+// console.log(course.courseInstructor) // old way to do it but if we have to print the same thing more than once then it is not suitable way to do it. 
+
+const {courseInstructor} = course 
+console.log(courseInstructor)
+
+const {courseInstructor : Instructor} = course //Distructuring the object
+console.log(Instructor)
