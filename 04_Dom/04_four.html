@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .big-black{
+            background-color: #212121;
+            color: #fff;
+        }
+        </style>
+</head>
+<body class="big-black">
+  <!--add new li using function-->
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addList(newlanguage){
+        const li = document.createElement('li')
+        li.innerHTML = `${newlanguage}`
+       //let parent = document.querySelector('.language')
+        //console.log(parent)
+       // parent= parent.appendChild(li)  
+       document.querySelector('.language') .appendChild(li)  
+    }
+    addList("C++")
+    addList("Python")
+
+  // Optimize way to do the same work
+  function addOptLi(newlanguage){
+    const li = document.createElement('li')
+    li.appendChild(document.createTextNode(newlanguage))
+    document.querySelector('.language') .appendChild(li)
+  }
+  addOptLi("Ruby")
+  addOptLi("Go lang")
+  // Edit the element 
+  const secondLan = document.querySelector("li:nth-child(2)")
+  //console.log(secondLan)
+  const newli = document.createElement('li')
+  newli.textContent = "Pearl"
+  secondLan.replaceWith(newli)
+// other way to do it 
+const firstChild = document.querySelector("li:first-child")
+//console.log(firstChild)
+firstChild.outerHTML = '<li>java</li>'
+//console.log(firstChild)
+
+// remove data 
+const lastElememt = document.querySelector("li:last-child")
+console.log(lastElememt)
+lastElememt.remove()
+</script
+</html>
