@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Second part of DOM</title>
+    <style>
+        .big-black{
+            background-color: #212121;
+            color: #fff;
+        }
+        </style>
+</head>
+<body  class="big-black">
+    <h3>Relatiohnship : parent -child</h3>
+    <div class="parent">
+        <!--Nodes list -->
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+    </div>
+
+    <script>
+          const parent =document.querySelector('.parent')
+          //console.log(parent.children[2].innerHTML)
+          for (let i = 0; i < parent.children.length; i++) {
+           // console.log(parent.children[i].innerHTML)
+            
+          }
+          parent.children[1].style.color = 'green'
+        //    console.log(parent.firstElementChild)
+        //    console.log(parent.lastElementChild)
+
+          // now we can also access parent through their child 
+
+           const child1 = document.querySelector('.day')
+           //console.log(child1.style.color = "blue")
+           const parent2 =(child1.parentElement)
+           //console.log(parent2.children[4])
+           console.log("Nodes", parent.childNodes)
+    </script>
+</body>
+</html>
