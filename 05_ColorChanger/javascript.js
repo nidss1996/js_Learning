@@ -4,7 +4,7 @@ button.forEach(function(btn){
     btn.addEventListener('click', function(e){
         //console.log("nidhi")
         //console.log(e)
-        console.log(e.target)
+        //console.log(e.target)
         if(e.target.id === 'grey')
         {
            document.body.style.backgroundColor = e.target.id
