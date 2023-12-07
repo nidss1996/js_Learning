@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title>Retrieve Input Value Example</title>
+</head>
+<body>
+
+    <!-- Input element -->
+    <input type="text" id="myInput" placeholder="Type something...">
+    <h2>hello</h2>
+
+    <!-- Button to trigger value retrieval -->
+    <button onclick="getValue()">Get Value</button>
+
+    <!-- Script to retrieve and display the value -->
+    <script>
+        //  var inputElement = document.getElementById("myInput");
+        //  const val = document.querySelector('h2').innerText
+        //  console.log(val)
+         
+        //  var inputValue = inputElement.value;
+        //     console.log(inputValue)
+
+
+        function getValue() {
+            // Get the input element by its id
+            var inputElement = document.getElementById("myInput");
+
+            // Get the value from the input element
+            var inputValue = inputElement.value;
+            console.log(inputValue)
+
+            // Display the value (you can use it as needed)
+            //alert("The input value is: " + inputValue);
+        }
+    </script>
+
+</body>
+</html>
