@@ -4,10 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript Form Submission</title>
-</head>
-<body>
+   <style>
+    .big-black{
+        background-color: #212121;
+        color: #fff;
+    }
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-    <h2> BMI Calculator </h2>
+    form {
+      width: 300px; /* Adjust the width as needed */
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2{
+       margin-right: 10vh;
+    }
+
+   </style>
+    
+</head>
+<body class="big-black">
+
+    <h2> BMI Calculator</h2>
     <form>
         <p><label for="height">Height in CM:</label>
         <input type="text" id="height" name="height"></p>
