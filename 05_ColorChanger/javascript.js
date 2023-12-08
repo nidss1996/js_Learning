@@ -8,19 +8,23 @@ button.forEach(function(btn){
         if(e.target.id === 'grey')
         {
            document.body.style.backgroundColor = e.target.id
+           document.body.style.color = "white"
         }
 
         if(e.target.id === 'yellow')
         {
            document.body.style.backgroundColor = e.target.id
+           document.body.style.color = "black"
         }
         if(e.target.id === 'blue')
         {
            document.body.style.backgroundColor = e.target.id
+           document.body.style.color = "white"
         }
         if(e.target.id === 'white')
         {
            document.body.style.backgroundColor = e.target.id
+           document.body.style.color = "black"
         }
 
     })
