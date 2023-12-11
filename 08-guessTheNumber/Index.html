@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Last Project</title>
+    <style>
+        .big-black{
+            background-color: #212121;
+            color: #fff;
+            
+        }
+        /* body {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+          margin: 0;
+        } */
+    
+        form {
+          width: 300px; /* Adjust the width as needed */
+          height: 100px;
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2{
+           margin-right: 10vh;
+        }
+        #sub{
+            
+            margin-left: 20vh;
+        }
+    
+       </style>
+</head>
+<body class="big-black">
+   <div>
+    <h1>Number Guessing Game </h1>
+    <p>Try and Guess a random number between 1 and 100.</p>
+    <p>You have 10 attepmts to guess the right number.</p>
+   </div>
+   <form>
+    <label for="guessFiled" id="Guess">Guess a number</label>
+        <input type="text" id="guessNumber" name="number" ><br><br><br>
+        <input type="submit" id="sub" name="Submit Guess" value="Submit Guess"></p>
+        <!--<input type="submit" value="Submit"> -->
+   </form>
+   <div class="resultParas">
+    <p>Previous Guess:<span class="guesses"></span></p>
+    <p>Guesses Remaining:<span class="lastResult">10</span></p>
+    <p class="Loworhigh"></p>
+   </div>
+    <script src="javascript.js"></script>
+</body>
+</html>
