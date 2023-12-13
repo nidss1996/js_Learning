@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Async Methods</title>
+</head>
+<body>
+    <h1>Blocking Code and non Blocking Code</h1>
+    <button id="stop">stop</button>
+
+    <script>
+        const sayHello = function(){
+            console.log("Hello ")
+        }
+        const change = function(){
+           
+            document.querySelector('h1').innerHTML = "Practice set"
+        }
+        const changeMe = setTimeout(change,2000)
+      const stop=document.querySelector('#stop') 
+    stop.addEventListener('click',function(event){
+        clearTimeout(changeMe)
+    })
+
+     
+       
+          
+    
+            
+    
+                
+    
+    </script>
+</body>
+</html>
