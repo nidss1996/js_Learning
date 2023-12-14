@@ -39,6 +39,11 @@
        
     </table>
 
+   <div class="cart">
+    <button id="sub">Click</button>
+
+    </div>
+
     <script>
         const RequestUrl = "https://api.github.com/users/nidss1996"
         const xhr = new XMLHttpRequest()
@@ -47,12 +52,30 @@
             console.log(xhr.readyState)
             if(xhr.readyState === 4){
                  const data = JSON.parse(this.responseText)
-                 console.log(data.login)
+                 document.querySelector('#sub').addEventListener('click', function(){
+
+                    const login = data.login
+                  const img = data.avatar_url
+                  const h2 = document.createElement('h2')
+                  const p = document.createElement('p')
+                  h2.innerHTML = `${login}`
+                  p.innerHTML =`<img src=${img} alt="Programming">`
+                  document.querySelector('.cart').appendChild(h2)
+                  document.querySelector('.cart').appendChild(p)
+
+                 })
+                  
+                //   document.querySelector('.cart').innerHTML = `<p>${login}</p>`
+                //  document.querySelector('.cart').innerHTML = `<span id="img"><img src=${img} alt="Italian Trulli"></span>`
+
 
             }
         }
         xhr.send()
+       
        //console.log("request sent")
+
+       
        
     </script>
     
