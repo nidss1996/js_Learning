@@ -5,13 +5,16 @@ class User {
     logMe(){
         console.log(`Username is ${this.username}`)
     }
+// it will restrict its own obj to access this method
+    static createId(){
+        return `123`
+    }
 }
 
 class Teacher extends User{
-    constructor(username,email,password){
+    constructor(username,email){
         super(username)
         this.email = email
-        this.password = password 
 
     }
     addCourse(){
@@ -19,9 +22,7 @@ class Teacher extends User{
     }
 }
 
-const objTech = new Teacher("nidhi","nidhi.gmail.com","123")
-
-console.log(objTech.logMe())
-console.log(objTech.addCourse())
-// console.log(objTech instanceof Teacher)
-// console.log(objTech instanceof User)
+const obj = new User("Nidhi")
+//console.log(obj.createId())
+const objtech = new Teacher("Neha","neha@gmail.com")
+console.log(objtech.createId())
